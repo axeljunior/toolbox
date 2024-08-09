@@ -1,0 +1,28 @@
+{
+  "name": "toolbox",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "npm run clean && tsc -b",
+    "start": "node ./server",
+    "local": "ts-node ./server",
+    "local:watch": "nodemon ./server -e ts,json --exec 'npm run local'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.1.0",
+    "nodemon": "^3.1.4",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "path": "^0.12.7"
+  }
+}
